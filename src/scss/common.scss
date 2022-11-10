@@ -1,1 +1,29 @@
 // Заголовки, общие БЄМ блоки и проче...
+.title {
+ @include adaptiveValue("font-size", 40, 25);
+ @include adaptiveValue("margin-bottom", 35, 20);
+ line-height: math.div(40, 40);
+}
+
+.btn {
+ display: inline-block;
+ font-size: rem(15);
+ line-height: math.div(24, 15);
+ color: $accentColor;
+ background-color: $btnColor; 
+ border-radius: rem(5);
+ border: rem(1) solid transparent;
+ transition: all 0.5s;
+ &:hover {
+  background-color: $accentColor;
+  color: $btnColor;
+  border-color: $btnColor;
+ }
+}
+
+.logo {
+ @include adaptiveValue("margin-right", 80, 15);
+ @media (max-width: $tablet) {
+  margin-right: 0;
+ }
+}

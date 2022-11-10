@@ -1,12 +1,84 @@
 //====================================================================================================
-
+.header {
+ padding: rem(15) 0;
+ // .header__inner
+ &__inner {
+  display: flex;
+  align-items: center;
+  @media (max-width: rem(600)) {
+   justify-content: space-between;
+  }
+ }
+ // .header__callback
+ &__callback {
+  font-weight: 700;
+  margin-left: auto;
+  padding: rem(13) rem(35);
+  text-transform: uppercase;
+  @media (max-width: $tablet) {
+   margin: 0 auto;
+  }
+  @media (max-width: rem(600)) {
+   border-color: $mainColor;
+   color: $mainColor;
+  }
+ }
+}
+//=======================================================================================
+.navigation {
+ // .navigation__list
+ &__list {
+  display: flex;
+  @include adaptiveValue("gap", 35, 20);
+  font-size: rem(15);
+  font-weight: 500;
+  line-height: math.div(24, 15);
+  margin-right: rem(10);
+  text-transform: uppercase;
+  @media (max-width: $tablet) {
+   flex-direction: column;
+   align-items: center;
+   font-size: rem(28);
+   margin-right: 0;
+   padding: rem(90) rem(60);
+  }
+ }
+ // .navigation__item
+ &__item {
+  transition: all 0.5s;
+  text-align: center;
+  &:hover {
+   text-decoration: underline;
+  } 
+ }
+}
+//=================================================================================================
+.menu {
+ // .menu__body
+ &__body {
+  @media (max-width: $tablet) {
+   position: fixed;
+   overflow: auto;
+   background-color: $btnColor;
+   z-index: 3;
+   transition: transform 0.7s; 
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   transform: translateY(-100%);
+   text-align: center;
+   .menu-open & {
+    transform: translateX(0);
+   }
+  }
+ }
+}
 //====================================================================================================
-
 //Burger
-/*
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(30);
@@ -22,7 +94,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: $btnColor;
 		}
 		&::before {
 			top: 0;
@@ -43,12 +115,13 @@
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
+    background-color: #000;
 			}
 			&::after {
 				bottom: calc(50% - rem(1));
 				transform: rotate(45deg);
+    background-color: #000;
 			}
 		}
 	}
 }
-*/

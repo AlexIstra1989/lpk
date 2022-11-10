@@ -1,3 +1,153 @@
 //====================================================================================================
+.about {
+ background-color: $bgColor;
+ padding: rem(60) 0;
+ // .about__inner
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+ }
+ // .about__info
+ &__info {
+  max-width: rem(480);
+  width: 100%; 
+ }
+ // .about__title
+ &__title {
+  font-weight: 800;
+  @include adaptiveValue("font-size", 50, 30);
+  line-height: math.div(60, 50);
+  margin-bottom: rem(21);
+ }
+ // .about__text
+ &__text {
+  line-height: math.div(24, 16);
+  margin-bottom: rem(30);
+ }
+ // .about__link
+ &__link {
+  padding: rem(13) rem(50);
+ }
+ // .about__images
+ &__images {
+  display: grid;
+  gap: rem(30);
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 162px);
+ }
+ // .about__image
+ &__image {
+  &:nth-child(2) {
+   grid-area: 2/1/2/2;
+  }
+  &_big {
+   grid-area: 1/2/1/2;
+  }
+ }
+}
+//====================================================================================================
+.lumber {
+ padding: rem(55) 0;
+ // .lumber__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: rem(30);
+ }
+ // .lumber__item
+ &__item {
+  border: 1px solid #C7C7C7;
+  border-radius: 10px;
+  transition: all 0.5s; 
+  cursor: pointer;
+  &:hover {
+   border-color: $btnColor;
+  }
+ }
+ // .lumber__image 
+ &__image {
+  margin-top: -1px;
+  margin-bottom: rem(14);
+ } 
+ // .lumber__info
+ &__info {
+  padding: 0 rem(19) rem(19);
+ }
+ // .lumber__item-title
+ &__item-title {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: math.div(24, 18);
+ }
+ // .lumber__price
+ &__price {
+  display: inline-block;
+  line-height: math.div(24, 16);
+  margin-bottom: rem(12);
+ }
+ // .lumber__btn
+ &__btn {
+  display: block;
+  width: 100%;
+  padding: rem(13) 0;
+ }
+ // .lumber__request
+ &__request {
+  @include background(url("../img/technique/request-bg.jpg"));
+  background-position: bottom;
+  border-radius: rem(10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 rem(30);
+ }
+ // .lumber__request-title
+ &__request-title {
+  font-weight: 700;
+  line-height: math.div(24, 16);
+  color: $accentColor;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: rem(30);
+  position: relative; 
+  &::before {
+   @include pseudo;
+   @include background(url("../img/icons/request-price.svg"));
+   width: rem(54);
+   height: rem(54);
+   left: 50%;
+   top: -65px;
+   transform: translateX(-50% );
+  }
+ }
+ // .lumber__request-link
+ &__request-link {
+  width: rem(47);
+  height: rem(47);
+  background-color: $accentColor;
+  border-radius: 50px;
+  position: relative;
+  border: rem(1) solid transparent;
+  transition: all 0.5s;
+  &:hover {
+   border-color: $mainColor;
+  }
+  &::before {
+   @include pseudo;
+   @include background(url("../img/icons/arrow-green.svg"));
+   width: rem(10);
+   height: rem(18);
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+  }
+ }
+}
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
 
 //====================================================================================================
