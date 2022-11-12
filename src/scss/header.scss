@@ -3,6 +3,7 @@
  padding: rem(15) 0;
  // .header__inner
  &__inner {
+  border-bottom: 1px solid #E7E7E7;
   display: flex;
   align-items: center;
   @media (max-width: rem(600)) {

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+<body>
+ <div class="wrapper">
+  @@include('html/_header.htm',{})
+  <main class="page">
+   <div class="breadcrumbs">
+    <div class="breadcrumbs__container">
+     <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+       <a class="breadcrumbs__link" href="#">Главная</a>
+      </li>
+      /
+      <li class="breadcrumbs__item">
+       <a class="breadcrumbs__link" href="#">Контакты</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <section class="contacts">
+    <div class="contacts__container">
+     <div class="contacts__inner">
+      <div class="contacts__map">
+       <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.2144838283943!2d48.97649815170846!3d59.39613398159235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fea934c95f7c5d%3A0xf516cad31c3ca13!2z0YPQuy4g0KTRgNGD0L3Qt9C1LCA0LCDQnNGD0YDQsNGI0LgsINCa0LjRgNC-0LLRgdC60LDRjyDQvtCx0LsuLCA2MTM3MTA!5e0!3m2!1sru!2sru!4v1668262931272!5m2!1sru!2sru"
+        width="740" height="459" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="contacts__info">
+       <h2 class="contacts__title title">Контакты</h2>
+       <h5 class="contacts__name">ИП Плехов Владимир Юрьевич</h5>
+       <div class="contacts__email email">
+        <span class="email__name">E-mail:</span>
+        <a class="email__link" href="mailto:i.p.plehov@yandex.ru">i.p.plehov@yandex.ru</a>
+       </div>
+       <div class="contacts__phones phones">
+        <span class="phones__caption">Номера телефонов:</span>
+        <ul class="phones__list">
+         <li class="phones__item">
+          <a class="phones__link phones__link_messenger" href="tel:+79195050001">+7 (919) 5050001</a>
+         </li>
+         <li class="phones__item">
+          <a class="phones__link" href="tel:+79014710001">+7 (901) 471 0001</a>
+         </li>
+         <li class="phones__item">
+          <a class="phones__link" href="tel:+79123324021">+7 (912) 332 4021 (бухгалтерия)</a>
+         </li>
+        </ul>
+       </div>
+       <div class="contacts__address address">
+        <span class="address__caption">Адрес:</span>
+        <address class="address__location">
+         Кировская область, Мурашинский район, г. Мураши,
+         Фрунзе улица, 4
+        </address>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="props">
+    <div class="props__container">
+     <h4 class="props__title">Реквизиты</h4>
+     <ul class="props__list">
+      <li class="props__item">ИП Плехов Владимир Юрьевич</li>
+      <li class="props__item">ИНН - 431801441200</li>
+      <li class="props__item">Юр.адрес: 610020, г. Киров, ул. Ленина, 73а, кв. 36</li>
+      <li class="props__item">Почтовый адрес: 613710, Кировская обл., г.Мураши, ул.Фрунзе, д.4</li>
+      <li class="props__item">р/счет 40802810827000026344в Кировское Отделение № 8612 ПАО Сбербанк г.Киров</li>
+      <li class="props__item">БИК 043304609</li>
+      <li class="props__item">к/счет 30101810500000000609</li>
+      <li class="props__item">бухгалтерия: 89195050001@mail.ru</li>
+     </ul>
+    </div>
+   </section>
+  </main>
+  @@include('html/_footer.htm',{})
+ </div>
+ @@include('html/_popup.htm',{})
+ @@include('html/_js.htm',{})
+</body>
+
+</html>

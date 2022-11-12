@@ -1,0 +1,113 @@
+.contacts {
+ padding: rem(30) 0 rem(50);
+ // .contacts__container
+ &__container {
+ }
+ // .contacts__inner
+ &__inner {
+  display: flex;
+  gap: rem(26);
+ }
+ // .contacts__map
+ &__map {
+ }
+ // .contacts__info
+ &__info {
+ }
+ // .contacts__title
+ &__title {
+  margin-bottom: rem(17);
+ }
+ // .contacts__name
+ &__name {
+  font-weight: 700;
+  line-height: math.div(24, 16);
+  margin-bottom: rem(16);
+ }
+}
+//================================================================================
+.email {
+ margin-bottom: rem(16);
+ // .email__name
+ &__name {
+  font-weight: 700;
+  line-height: math.div(27, 16);
+  margin-bottom: rem(4);
+  display: block;
+ }
+ // .email__link
+ &__link {
+
+ }
+}
+//==================================================================================
+.phones {
+ margin-bottom: rem(16);
+ // .phones__caption
+ &__caption {
+  font-weight: 700;
+  line-height: math.div(27, 16);
+  margin-bottom: rem(4);
+  display: block;
+ }
+ // .phones__list
+ &__list {
+ }
+ // .phones__item
+ &__item {
+  line-height: math.div(23, 16);
+ }
+ // .phones__link
+ &__link {
+  // .phones__link_messenger
+  &_messenger {
+   position: relative;
+   &::before {
+    @include pseudo;
+    @include background(url("../img/social/telegram.svg"));
+    width: rem(15);
+    height: rem(15);
+    right: rem(-20);
+    top: rem(3);
+   }
+   &::after {
+    @include pseudo;
+    @include background(url("../img/social/whatsapp.svg"));
+    width: rem(15);
+    height: rem(15);
+    right: rem(-40);
+    top: rem(3);
+   }
+  }
+ }
+}
+//=====================================================================================
+.address {
+ // .address__caption
+ &__caption {
+  font-weight: 700;
+  line-height: math.div(27, 16);
+  margin-bottom: rem(4);
+  display: block;
+ }
+}
+//===============================================================================================
+.props {
+ background-color: $bgColor;
+ padding: rem(40) 0; 
+ // .props__title
+ &__title {
+  font-size: rem(24);
+  font-weight: 700;
+  line-height: math.div(30, 24);
+  margin-bottom: rem(13);
+ }
+ // .props__list
+ &__list {
+ }
+ // .props__item
+ &__item {
+  font-weight: 500;
+  line-height: math.div(30, 16);
+ }
+}

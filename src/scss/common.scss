@@ -27,3 +27,20 @@
   margin-right: 0;
  }
 }
+
+.breadcrumbs {
+ padding: rem(20) 0;
+ // .breadcrumbs__list
+ &__list {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+ }
+ // .breadcrumbs__item
+ &__item {
+ }
+ // .breadcrumbs__link
+ &__link {
+  line-height: math.div(24, 16);
+ }
+}

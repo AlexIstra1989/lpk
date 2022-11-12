@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Строганная доска"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+    <div class="breadcrumbs">
+     <div class="breadcrumbs__container">
+      <ul class="breadcrumbs__list">
+       <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">Главная</a>
+       </li>
+         /  
+       <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">Товары</a>
+       </li>
+         /
+       <li class="breadcrumbs__item">
+        <span class="breadcrumbs__current" href="#">Строганная доска</span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <section class="product">
+     <div class="product__container">
+      <div class="product__inner">
+       <div class="product__image">
+        <img src="img/products/image-1.png" alt="строганная доска">
+       </div>
+       <div class="product__info">
+        <h2 class="product__title title">Строганная доска</h2>
+        <p class="product__descr">(Прошла сушку и упакована в термоусадочную пленку)</p>
+        <ul class="product__list">
+         <li class="product__item product__item_size">Размеры:</li>
+         <li class="product__item">20х90</li>
+         <li class="product__item">45х145</li>
+         <li class="product__item">45х195</li>
+        </ul>
+        <span class="product__price">от 10 000 руб/м3</span>
+        <button class="product__btn btn">Заказать</button>
+       </div>
+      </div>
+     </div>
+    </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

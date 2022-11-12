@@ -444,3 +444,106 @@
   }
  }
 }
+//========================================================================================================
+.log-trucks {
+ padding: rem(50) 0;
+ // .log-trucks__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: rem(30);
+ }
+ // .log-trucks__item
+ &__item {
+  border: 1px solid #C7C7C7;
+  border-radius: 10px;
+  transition: all 0.5s; 
+  cursor: pointer;
+  &:hover {
+   border-color: $btnColor;
+  }
+ }
+ // .log-trucks__item-link
+ &__item-link {
+ }
+ // .log-trucks__image
+ &__image {
+  width: 100%;
+ }
+ // .log-trucks__info
+ &__info {
+  display: flex;
+  flex-direction: column;
+  padding: rem(20);
+ }
+ // .log-trucks__name 
+ &__name {
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: math.div(24, 18);
+  margin-bottom: rem(5);
+ }
+ // .log-trucks__price
+ &__price {
+  line-height: math.div(24, 16);
+  margin-bottom: rem(19);
+ }
+ // .log-trucks__btn
+ &__btn {
+  padding: rem(13) 0;
+ }
+}
+//=======================================================================================================
+.advantages {
+ padding: rem(50) 0;
+ background-color: $bgColor;
+ // .advantages__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: rem(30);
+ }
+ // .advantages__item
+ &__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #C7C7C7;
+  transition: all 0.5s; 
+  cursor: pointer;
+  height: rem(105);
+  position: relative;
+  &:hover {
+   border-color: $btnColor;
+  }
+  &::before {
+   @include pseudo;
+   left: rem(12);
+   top: rem(22);
+  }
+  // .advantages__item_tech
+  &_tech::before {
+   @include background(url("../img/advantages/truck.svg"));
+   width: rem(60);
+   height: rem(57);
+  }
+  // .advantages__item_driver
+  &_driver::before {
+   @include background(url("../img/advantages/driver.svg"));
+   width: rem(45);
+   height: rem(54);
+  }
+  // .advantages__item_delivery
+  &_delivery::before {
+   @include background(url("../img/advantages/delivery.svg"));
+   width: rem(63);
+   height: rem(63);
+   background-size: contain;
+  }
+ }
+ // .advantages__name
+ &__name {
+  padding-left: rem(90);
+  padding-right: rem(10);
+ }
+}
