@@ -41,6 +41,7 @@
  }
  // .breadcrumbs__link
  &__link {
+  @include adaptiveValue("font-size", 16, 14);
   line-height: math.div(24, 16);
  }
 }

@@ -1,18 +1,18 @@
 .contacts {
- padding: rem(30) 0 rem(50);
- // .contacts__container
- &__container {
- }
+ @include adaptiveValue("padding-top", 50, 25);
+ @include adaptiveValue("padding-bottom", 50, 25);
  // .contacts__inner
  &__inner {
   display: flex;
   gap: rem(26);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
  }
  // .contacts__map
  &__map {
- }
- // .contacts__info
- &__info {
+  max-width: rem(1200);
+  width: 100%;
  }
  // .contacts__title
  &__title {
@@ -35,10 +35,6 @@
   margin-bottom: rem(4);
   display: block;
  }
- // .email__link
- &__link {
-
- }
 }
 //==================================================================================
 .phones {
@@ -49,9 +45,6 @@
   line-height: math.div(27, 16);
   margin-bottom: rem(4);
   display: block;
- }
- // .phones__list
- &__list {
  }
  // .phones__item
  &__item {
@@ -102,9 +95,7 @@
   line-height: math.div(30, 24);
   margin-bottom: rem(13);
  }
- // .props__list
- &__list {
- }
+
  // .props__item
  &__item {
   font-weight: 500;
